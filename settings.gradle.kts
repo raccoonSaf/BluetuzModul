@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "BluetuzModul"
 include(":app")
- 
+include(":bt_def")
