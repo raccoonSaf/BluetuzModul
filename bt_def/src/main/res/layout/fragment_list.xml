@@ -42,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 app:srcCompat="@drawable/ic_bluetooth_on" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
