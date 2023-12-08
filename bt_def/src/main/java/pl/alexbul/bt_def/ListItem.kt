@@ -1,7 +1,8 @@
 package pl.alexbul.bt_def
 
+import android.bluetooth.BluetoothDevice
+
 data class ListItem(
-    val name: String,
-    val mac: String,
+    val device: BluetoothDevice,
     val isChecked: Boolean
 )

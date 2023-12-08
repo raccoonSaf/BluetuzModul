@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import pl.alexbul.bt_def.databinding.ListItemBinding
+
 //import pl.alexbul.bt_def.databinding.ListBinding
 
 
@@ -35,8 +36,12 @@ class ItemAdapter(private val listener: Listener) :
 
         fun bind(item: ListItem) = with(b) {
             device = item
-            name.text = item.name
-            mac.text = item.mac
+            try {
+                name.text = item.device.name
+                mac.text = item.device.address
+            } catch (e: SecurityException){}
+
+            if (item.isChecked) adapter.selectCheckBox(checkBox)
         }
     }
 
