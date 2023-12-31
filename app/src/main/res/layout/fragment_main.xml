@@ -4,21 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fon"
     tools:context=".MainFragment">
 
     <TextView
         android:id="@+id/tvStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="@string/hello_first_fragment"
+        android:layout_marginTop="30dp"
+        android:text="Motoren Control"
+        android:background="@android:color/white"
         android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="STOP"
+        android:background="@android:color/darker_gray"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+    <ImageButton
+        android:id="@+id/imageStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStop"
+        android:background="@android:color/darker_gray"
+        app:srcCompat="@drawable/ic_stop" />
+
+
+    <TextView
+        android:background="@android:color/holo_green_dark"
+        android:id="@+id/textForw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Forward"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageStop" />
+
+    <ImageButton
+        android:id="@+id/imageFor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textForw"
+        app:srcCompat="@drawable/ic_forw" />
+
+    <TextView
+        android:background="@android:color/holo_green_dark"
+        android:id="@+id/textRew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Reverse"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFor" />
+
+
+    <ImageButton
+        android:id="@+id/imageRew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRew"
+        app:srcCompat="@drawable/ic_rew" />
 
     <Button
         android:id="@+id/bList"
@@ -42,14 +115,5 @@
         app:layout_constraintEnd_toEndOf="@+id/bList"
         app:layout_constraintStart_toStartOf="@+id/bList" />
 
-
-    <Button
-        android:id="@+id/bSend"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="send a"
-        app:layout_constraintBottom_toTopOf="@+id/bConnect"
-        app:layout_constraintEnd_toEndOf="@+id/bConnect"
-        app:layout_constraintStart_toStartOf="@+id/bConnect" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
